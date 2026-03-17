@@ -1,38 +1,87 @@
+/* ===== GENERAL LAYOUT ===== */
 body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
+    margin: 0;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
 }
-nav ul li, footer ul li {
+
+/* centers your page content but NOT the navbar */
+.container {
+    width: 70%;
+    margin: 60px auto;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #2e7d32;   /* green bar */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;            /* remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;               /* horizontal layout */
+    justify-content: center;     /* center items */
+    gap: 30px;                   /* spacing */
+}
+
+nav ul li {
     display: inline;
-    margin-right: 20px;
 }
-a {
+
+nav ul li a {
     text-decoration: none;
-    color: #999;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
 }
-a:hover {
+
+/* hover effect */
+nav ul li a:hover {
     text-decoration: underline;
+    color: #c8e6c9;
 }
+
+/* ===== TEXT STYLES ===== */
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    color: #999;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* ===== BLOG POSTS ===== */
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
