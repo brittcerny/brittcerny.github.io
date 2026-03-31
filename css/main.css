@@ -17,7 +17,7 @@ body {
 }
 
 .blurb-image {
-  width: 300px;   /* adjust size */
+  width: 600px;   /* adjust size */
   height: auto;
   border-radius: 10px; /* optional, looks nice */
 }
