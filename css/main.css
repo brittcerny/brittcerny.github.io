@@ -12,19 +12,22 @@ body {
     padding: 0 40px;
 }  
 .blurb-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.blurb-image {
-  width: 300px;   /* adjust size */
-  height: auto;
-  border-radius: 10px; /* optional, looks nice */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 40px;
 }
 
 .text {
   flex: 1;
+  min-width: 0;
+}
+
+.blurb-image {
+  width: 40%;
+  max-width: 500px;
+  height: auto;
 }
 
 /* ===== NAVBAR ===== */
