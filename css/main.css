@@ -95,7 +95,7 @@ ul.posts li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: #e7dfd4;
-  padding: 80px 40px;
+  padding: 60px 40px;
   text-align: center;
 }
 
