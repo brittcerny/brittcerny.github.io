@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    background-color: #e7dfd4;
 }
 
 /* centers your page content but NOT the navbar */
