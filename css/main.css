@@ -11,22 +11,20 @@ body {
     margin: 60px auto;
     padding: 0 40px;
 }  
-}
 .blurb-content {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
-}
-
-.text {
-  flex: 1;              /* takes remaining space */
+  gap: 20px;
 }
 
 .blurb-image {
-  width: 40%;           /* 🔥 THIS fixes your issue */
-  max-width: 500px;     /* prevents it from getting huge */
+  width: 300px;   /* adjust size */
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px; /* optional, looks nice */
+}
+
+.text {
+  flex: 1;
 }
 
 /* ===== NAVBAR ===== */
