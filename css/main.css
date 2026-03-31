@@ -5,10 +5,12 @@ body {
     background-color: #e7dfd4;
 }
 
-/* centers your page content but NOT the navbar */
 .container {
-    width: 70%;
+    width: 100%;
+    max-width: 1200px;   /* prevents it from getting TOO wide */
     margin: 60px auto;
+    padding: 0 40px;     /* adds breathing room instead of margins */
+}
 }
 .blurb-content {
   display: flex;
