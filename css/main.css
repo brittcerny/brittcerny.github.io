@@ -90,3 +90,37 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #e7dfd4;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.stat {
+  padding: 20px;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.stat img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
