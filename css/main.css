@@ -10,7 +10,21 @@ body {
     width: 70%;
     margin: 60px auto;
 }
+.blurb-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
+.blurb-image {
+  width: 300px;   /* adjust size */
+  height: auto;
+  border-radius: 10px; /* optional, looks nice */
+}
+
+.text {
+  flex: 1;
+}
 /* ===== NAVBAR ===== */
 nav {
     background-color: #2e7d32;   /* green bar */
