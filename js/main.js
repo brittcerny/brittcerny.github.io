@@ -1,4 +1,3 @@
-console.log("JS RUNNING");
 document.addEventListener("DOMContentLoaded", function () {
 
 async function getCount(url, elementId) {
@@ -24,21 +23,23 @@ async function getUniqueCount(url, elementId) {
   }
 }
 
-// 🌳 Trees
+const base = "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25/FeatureServer";
+
+// 🌳 Trees (Layer 0)
 getCount(
-  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+  `${base}/0/query?where=1%3D1&returnCountOnly=true&f=json`,
   "trees-count"
 );
 
-// 👧 Troops
+// 👧 Troops (Layer 1)
 getUniqueCount(
-  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/1/query?where=1=1&outFields=troop_id&returnDistinctValues=true&f=json",
+  `${base}/1/query?where=1%3D1&outFields=troop_id&returnDistinctValues=true&f=json`,
   "troops-count"
 );
 
-// 🏢 Businesses
+// 🏢 Businesses (Layer 2)
 getUniqueCount(
-  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/2/query?where=1=1&outFields=bbb_partner&returnDistinctValues=true&f=json",
+  `${base}/2/query?where=1%3D1&outFields=bbb_partner&returnDistinctValues=true&f=json`,
   "business-count"
 );
 
