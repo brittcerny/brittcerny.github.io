@@ -1,3 +1,4 @@
+console.log("JS RUNNING");
 document.addEventListener("DOMContentLoaded", function () {
 
 async function getCount(url, elementId) {
