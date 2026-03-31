@@ -12,20 +12,65 @@ title: Britt's Web Page
 <!-- 🌱 STATS SECTION -->
 <section class="stats">
   <div class="stat">
-    <h2>20</h2>
+    <h2 id="trees-count">Loading...</h2>
     <p>Trees Planted</p>
-    <img src="/images/tree.jpg" alt="Trees">
+    <img src="images/tree.jpg" alt="Trees">
   </div>
 
   <div class="stat">
-    <h2>15</h2>
+    <h2 id="troops-count">Loading...</h2>
     <p>Troops Participating</p>
-    <img src="/images/girlscouts.jpg" alt="Troops">
+    <img src="images/girlscouts.jpg" alt="Troops">
   </div>
 
   <div class="stat">
-    <h2>8</h2>
+    <h2 id="business-count">Loading...</h2>
     <p>BBB Businesses Partnered</p>
-    <img src="/images/bussiness.jpg" alt="Businesses">
+    <img src="images/bussiness.jpg" alt="Businesses">
   </div>
 </section>
+
+
+<!-- 🔥 DATA SCRIPT -->
+<script>
+async function getCount(url, elementId) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    document.getElementById(elementId).innerText = data.count;
+  } catch (error) {
+    console.error(error);
+    document.getElementById(elementId).innerText = "N/A";
+  }
+}
+
+async function getUniqueCount(url, elementId) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const count = data.features.length;
+    document.getElementById(elementId).innerText = count;
+  } catch (error) {
+    console.error(error);
+    document.getElementById(elementId).innerText = "N/A";
+  }
+}
+
+// 🌳 Trees (count records)
+getCount(
+  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+  "trees-count"
+);
+
+// 👧 Troops (unique troop_id)
+getUniqueCount(
+  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/1/query?where=1=1&outFields=troop_id&returnDistinctValues=true&f=json",
+  "troops-count"
+);
+
+// 🏢 Businesses (unique bbb_partner)
+getUniqueCount(
+  "https://services.arcgis.com/o6oETlrWetREI1A2/arcgis/rest/services/service_ff5d6d29688f4807a8c7ce2b32432f25_form/FeatureServer/2/query?where=1=1&outFields=bbb_partner&returnDistinctValues=true&f=json",
+  "business-count"
+);
+</script>
