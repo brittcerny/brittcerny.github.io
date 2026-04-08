@@ -147,34 +147,40 @@ ul.posts li {
   margin-top: 20px;
 }
 
-/* HERO */
+/* HERO BANNER */
 .hero {
-  height: 100vh;
+  height: 60vh;
+  max-height: 500px;
+  min-height: 300px;
   width: 100%;
 
-  background-image: url('/images/canopy.jpg');
+  background-image: url('/images/canopy.jpg'); /* use resized image */
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 30%;
   background-repeat: no-repeat;
 
   position: relative;
 }
 
+/* dark overlay */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.4);
 }
 
+/* centered text */
 .hero-overlay {
   position: relative;
   z-index: 1;
   height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   color: white;
   text-align: center;
 }
@@ -184,7 +190,12 @@ ul.posts li {
   margin: 0;
 }
 
-/* SECTIONS */
+.hero-overlay p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* CONTENT SECTIONS */
 .section {
   padding: 80px 20px;
 }
@@ -215,7 +226,7 @@ ul.posts li {
   flex-direction: row-reverse;
 }
 
-/* mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -223,5 +234,9 @@ ul.posts li {
 
   .section.reverse .container {
     flex-direction: column;
+  }
+
+  .hero-overlay h1 {
+    font-size: 40px;
   }
 }
