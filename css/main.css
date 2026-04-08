@@ -243,7 +243,7 @@ ul.posts li {
 
 /* HOME HERO IMAGE */
 .home-hero {
-  background-image: url('/images/planting.png'); /* your planting image */
+  background-image: url('/images/plating.png'); /* your planting image */
   background-size: cover;
   background-position: center;
 }
