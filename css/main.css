@@ -241,9 +241,10 @@ ul.posts li {
   }
 }
 
-/* HOME HERO IMAGE */
+/* HOME HERO */
 .home-hero {
-  background-image: url('/images/plating.png'); /* your planting image */
+  background-image: url('/images/plating.png');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
 }
