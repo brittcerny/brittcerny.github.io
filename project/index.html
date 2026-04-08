@@ -18,15 +18,46 @@ title: Urban Cookie Forest Map
     and support future urban forestry efforts across the city.
     </p>
 
-    <iframe 
-         width="100%" 
-         height="600" 
-         frameborder="0" 
-  scrolling="no" 
-  allowfullscreen 
-        allow="local-network-access;geolocation" 
-        title="Urban Cookie Forest Map" 
-        src="https://univredlands.maps.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=f0c14a2f42f64f38943dcabd4cb2a141&theme=dark&bookmarks=true&heading=true&legend=true&information=true&scroll=false&center=-117.16491417655048,34.06305963541703&scale=9027.977411" >
-        
-    </iframe>
+       <!-- Map container -->
+    <div id="viewDiv"></div>
 </div>
+
+<!-- ArcGIS JS API -->
+<link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/dark/main.css">
+<script src="https://js.arcgis.com/4.29/"></script>
+
+<style>
+  #viewDiv {
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+  }
+</style>
+
+<script>
+require([
+  "esri/WebMap",
+  "esri/views/MapView",
+  "esri/widgets/Legend"
+], function(WebMap, MapView, Legend) {
+
+  const webmap = new WebMap({
+    portalItem: {
+      id: "f0c14a2f42f64f38943dcabd4cb2a141"
+    }
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: webmap
+  });
+
+  // Optional: add legend (like your iframe version)
+  const legend = new Legend({
+    view: view
+  });
+
+  view.ui.add(legend, "bottom-right");
+
+});
+</script>
