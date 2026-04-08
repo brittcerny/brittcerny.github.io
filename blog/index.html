@@ -1,11 +1,42 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: Dashboard
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<!-- HERO BANNER -->
+<div class="hero">
+  <div class="hero-overlay">
+    <h1>Urban Cookie Forest Dashboard</h1>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<section class="section">
+  <div class="container">
+    <div class="text">
+      <h2>Our Mission</h2>
+      <p>
+        The Urban Cookie Forest aims to expand urban tree canopy in Phoenix, Arizona,
+        improving environmental resilience and community well-being.
+      </p>
+    </div>
+    <div class="image">
+      <img src="/images/canopy.jpg" alt="Tree planting">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section reverse">
+  <div class="container">
+    <div class="text">
+      <h2>Why It Matters</h2>
+      <p>
+        Urban trees reduce heat, improve air quality, and create healthier communities.
+      </p>
+    </div>
+    <div class="image">
+      <img src="/images/canopy.jpg" alt="City trees">
+    </div>
+  </div>
+</section>
