@@ -240,3 +240,10 @@ ul.posts li {
     font-size: 40px;
   }
 }
+
+/* HOME HERO IMAGE */
+.home-hero {
+  background-image: url('/images/planting.png'); /* your planting image */
+  background-size: cover;
+  background-position: center;
+}
