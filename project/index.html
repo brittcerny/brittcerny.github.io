@@ -32,15 +32,21 @@ title: Urban Cookie Forest Map
 <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/dark/main.css">
 <script src="https://js.arcgis.com/4.29/"></script>
 
+<div class="map-wrapper">
+  <div id="viewDiv"></div>
+</div>
+
 <style>
+  .map-wrapper {
+    padding: 0 40px;   /* space on left and right */
+  }
+
   #viewDiv {
     height: 600px;
     width: 100%;
     margin-top: 20px;
-
-    border: 2px solid white;   /* border */
-    border-radius: 12px;       /* rounded corners */
-    overflow: hidden;          /* keeps map inside rounded edges */
+    border-radius: 12px;
+    overflow: hidden;
   }
 </style>
 
