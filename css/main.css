@@ -1,7 +1,9 @@
-/* ===== GENERAL LAYOUT ===== */
+/* =====================================================
+   GENERAL LAYOUT
+===================================================== */
 body {
     margin: 0;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     background-color: #e7dfd4;
 }
 
@@ -10,7 +12,9 @@ body {
     max-width: 1200px;
     margin: 60px auto;
     padding: 0 40px;
-}  
+}
+
+/* Blurb layout */
 .blurb-content {
   display: flex !important;
   flex-direction: row !important;
@@ -30,19 +34,22 @@ body {
   height: auto;
 }
 
-/* ===== NAVBAR ===== */
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 nav {
-    background-color: #2e7d32;   /* green bar */
+    background-color: #2e7d32; /* green bar */
     padding: 15px 0;
 }
 
 nav ul {
-    list-style: none;            /* remove bullets */
+    list-style: none;        /* remove bullets */
     margin: 0;
     padding: 0;
-    display: flex;               /* horizontal layout */
-    justify-content: center;     /* center items */
-    gap: 30px;                   /* spacing */
+    display: flex;           /* horizontal layout */
+    justify-content: center; /* center items */
+    gap: 30px;               /* spacing */
 }
 
 nav ul li {
@@ -56,13 +63,16 @@ nav ul li a {
     font-size: 1.1em;
 }
 
-/* hover effect */
+/* Hover effect */
 nav ul li a:hover {
     text-decoration: underline;
     color: #c8e6c9;
 }
 
-/* ===== TEXT STYLES ===== */
+
+/* =====================================================
+   TEXT STYLES
+===================================================== */
 h1 {
     font-size: 3em;
 }
@@ -73,7 +83,10 @@ p {
     color: #333;
 }
 
-/* ===== LINKS ===== */
+
+/* =====================================================
+   LINKS
+===================================================== */
 a {
     text-decoration: none;
     color: #999;
@@ -83,7 +96,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: 0.8em;
@@ -101,7 +117,10 @@ footer ul li {
     margin-right: 20px;
 }
 
-/* ===== BLOG POSTS ===== */
+
+/* =====================================================
+   BLOG POSTS
+===================================================== */
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
@@ -109,8 +128,12 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
-/* ===== STATS ===== */
 }
+
+
+/* =====================================================
+   STATS SECTION
+===================================================== */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -147,14 +170,17 @@ ul.posts li {
   margin-top: 20px;
 }
 
-/* HERO BANNER */
+
+/* =====================================================
+   HERO BANNER
+===================================================== */
 .hero {
   height: 60vh;
   max-height: 500px;
   min-height: 300px;
   width: 100%;
 
-  background-image: url('/images/canopy.jpg'); /* use resized image */
+  background-image: url('/images/canopy.jpg'); /* base image */
   background-size: cover;
   background-position: 50% 30%;
   background-repeat: no-repeat;
@@ -162,7 +188,7 @@ ul.posts li {
   position: relative;
 }
 
-/* dark overlay */
+/* Dark overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -170,7 +196,7 @@ ul.posts li {
   background: rgba(0,0,0,0.4);
 }
 
-/* centered text */
+/* Centered hero text */
 .hero-overlay {
   position: relative;
   z-index: 1;
@@ -195,7 +221,10 @@ ul.posts li {
   font-size: 18px;
 }
 
-/* CONTENT SECTIONS */
+
+/* =====================================================
+   CONTENT SECTIONS
+===================================================== */
 .section {
   padding: 80px 20px;
 }
@@ -221,12 +250,50 @@ ul.posts li {
   border-radius: 12px;
 }
 
-/* alternating layout */
+/* Alternating layout */
 .section.reverse .container {
   flex-direction: row-reverse;
 }
 
-/* MOBILE */
+
+/* =====================================================
+   HOME HERO (OVERRIDE)
+===================================================== */
+.home-hero {
+  background-image: url('/images/plating.png');
+  background-size: cover;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================================
+   DASHBOARD / MAP
+===================================================== */
+.map-section {
+  max-width: 1100px; /* controls overall width */
+  margin: 0 auto;    /* centers it */
+  padding: 0 40px;   /* side spacing */
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 75vh;      /* tall dashboard */
+  margin-top: 20px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -239,32 +306,4 @@ ul.posts li {
   .hero-overlay h1 {
     font-size: 40px;
   }
-}
-
-/* HOME HERO */
-.home-hero {
-  background-image: url('/images/plating.png');
-  background-size: cover;
-  background-position: 50% 40%;
-  background-repeat: no-repeat;
-}
-/* Dashboard */
-.map-section {
-  max-width: 1100px;   /* controls overall width */
-  margin: 0 auto;      /* centers it */
-  padding: 0 40px;     /* space on left/right */
-}
-
-.map-wrapper {
-  width: 100%;
-  height: 75vh;        /* keeps your nice tall dashboard */
-  margin-top: 20px;
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
 }
