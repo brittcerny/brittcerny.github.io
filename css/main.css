@@ -290,6 +290,11 @@ ul.posts li {
   overflow: hidden;
 }
 
+.dashboard-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
 /* =====================================================
    MOBILE RESPONSIVE
